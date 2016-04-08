@@ -12,6 +12,13 @@
 //require '../App/Controllers/Posts.php';
 
 //echo __DIR__;
+
+/**
+ * Twig
+ */
+require_once dirname(__DIR__).'/vendor/twig/twig/lib/Twig/Autoloader.php';
+Twig_Autoloader::register();
+
 /**
  * Autoloader
  */
