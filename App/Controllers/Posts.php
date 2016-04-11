@@ -8,6 +8,9 @@
  */
 namespace App\Controllers;
 
+use \Core\View;
+use App\Models\Post;
+
 class Posts extends \Core\Controller
 {
     /**
@@ -17,8 +20,10 @@ class Posts extends \Core\Controller
      */
     public function indexAction()
     {
-        echo "Hi Wlodek, I'm in index() action in the Post controller";
-        echo'<br/><p>Query string: <pre>'.htmlspecialchars(print_r($_GET, true)).'</pre></p>';
+//        echo "Hi Wlodek, I'm in index() action in the Post controller";
+//        echo'<br/><p>Query string: <pre>'.htmlspecialchars(print_r($_GET, true)).'</pre></p>';
+        $posts= Post::getAllPosts();
+        View::renderTemplate('Posts/index.html', ['posts'=>$posts]);
     }
 
     /**

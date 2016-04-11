@@ -5,6 +5,25 @@
  * Date: 07/04/16
  * Time: 11:26
  */
+//phpinfo();
+//$host = "localhost";
+//$db_name = "mvc";
+//$user = "root";
+//$password = "root";
+//
+///**
+// * Create a connection
+// */
+//$conn = new mysqli($host, $user, $password, $db_name);
+//
+///**
+// * Check the connection
+// */
+//if ($conn->connect_error) {
+//    echo "Connection failed: " . $conn->connect_error;
+//} else {
+//    echo "Connected successfully, connection data are ok.";
+//}
 //echo 'Requested URL = "' .$_SERVER['QUERY_STRING'] .'"';
 
  //Require the controller class
@@ -29,6 +48,14 @@ spl_autoload_register(function ($class) {
         require $root . '/' . str_replace('\\', '/', $class) . '.php';
     }
 });
+
+/**
+ * Error and Exception handling
+ */
+error_reporting(E_ALL);
+set_error_handler('Core\Error::errorHandler');
+set_exception_handler('Core\Error::exceptionHandler');
+
 /**
  * Routing
  */
