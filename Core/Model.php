@@ -23,12 +23,7 @@ abstract class Model
     {
         static $db = null;
 
-        if ($db === null){
-//            $host='localhost';
-//            $dbname = 'mvc';
-//            $username = 'root';
-//            $password = 'root';
-        }
+
 
         try{
 //            $db = new PDO("mysql:host=$host; dbname=$dbname; charset=utf8", $username, $password);

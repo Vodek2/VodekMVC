@@ -21,10 +21,10 @@ class Post extends \Core\Model
      */
     public  static function getAllPosts()
     {
-//        $host='localhost';
-//        $dbname = 'mvc';
-//        $username = 'root';
-//        $password = 'root';
+//        $host=''; //DB host
+//        $dbname = ''; //name of the DB
+//        $username = ''; username for DB
+//        $password = ''; password
 
         try{
 //            $db = new PDO("mysql:host=$host; dbname=$dbname; charset=utf8", $username, $password);
